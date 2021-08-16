@@ -1,4 +1,5 @@
 import {storage} from "./index";
+import {selectorCounters} from "./selector";
 
 export class Dish {
     #count;
@@ -28,7 +29,7 @@ export class Dish {
                     break;
                 }
                 case 0: {
-                    if (this.getCount() > 0) {
+                    if (this.getCount() > 1) {
                         this.#count = this.getCount() - 1;
                         storage.removeItem({
                             id: this.id,
@@ -37,7 +38,12 @@ export class Dish {
                             image: this.img,
                             count: this.#count
                         });
-                    } else {this.#count = 0;
+                    } else {this.#count = 1;
+                        this.#count = this.getCount() - 1;
+                        document.getElementById(`${this.id*10}`).style.display = 'none';
+                        const quantities = selectorCounters();
+                        quantities.map(el => el.id !==this.id ? el.innerHTML = '0': el) ;
+                        document.getElementById(`${this.id*10}`).style.display = 'none';
                         storage.deleteItem({id: this.id, price: this.price, title: this.title, image: this.img, count: this.#count});
                     }
                         break;

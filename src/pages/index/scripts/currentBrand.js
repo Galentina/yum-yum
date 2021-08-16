@@ -39,9 +39,10 @@ export const productsBrand = (brand) => {
 
             quantities[j].innerHTML='0';
             document.getElementById(`${(j+1)*10}`).style.display = 'none';
-            let arr = storage.getItems('order');
 
             //recover quantity ot chosen items
+            let arr = storage.getItems('order');
+
             let arr1 = (arr && arr.length !==0) ? arr.filter(el => el.title === chosenBrand[j].title) : [];
             if (arr && arr.length !==0) arr1.map(el => el.id===j ? quantities[j].innerHTML=el.count : quantities[j].innerHTML=chosenBrand[j].count);
             else quantities[j].innerHTML = 0;

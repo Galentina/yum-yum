@@ -1,5 +1,7 @@
 
 // class storage for chosen brand and for orders
+import {selectorCounters} from "./index/scripts/selector";
+
 export class Storage {
     getItems(key) {
         return JSON.parse(localStorage.getItem(key));
@@ -11,6 +13,7 @@ export class Storage {
         } else finalChoice = items;
         localStorage.removeItem(key);
         localStorage.setItem(key, JSON.stringify(finalChoice));
+        (key==='order') ? document.getElementById('basket').innerHTML = this.getItems('order').length : null;
     };
 
     addItem(item){
@@ -28,7 +31,6 @@ export class Storage {
         } else {
             updateStorage.push(item);
         }
-        // localStorage.removeItem('order');
         this.setItems('order',updateStorage);
     }
 
@@ -39,8 +41,6 @@ export class Storage {
                     updateStorage[i].count -= 1;
                 }
             }
-
-        // localStorage.removeItem('order');
         this.setItems('order',updateStorage);
     }
 

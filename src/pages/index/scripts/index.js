@@ -19,10 +19,10 @@ function addCount(imageId){
         let sign = +imageId[1];
         if (el.id === index) {
             el.count = el.setCount(sign);
-
             let num;
-            if (storage.getItems('order').length !== 0)
-                num = storage.getItems('order').filter(item=> (item.title === el.title && item.id===el.id))[0].count;
+            if (storage.getItems('order').length !== 0) {
+                num = storage.getItems('order').filter(item => (item.title === el.title && item.id === el.id))[0].count || 0;
+            }
             else num = '0';
             const element = document.getElementById(`${index}`);
             element.innerHTML = String(num);
@@ -37,6 +37,7 @@ function addCount(imageId){
     return orders;
 }
 
+document.getElementById('basket').innerHTML = '0';
 // upload a chosen brand on the page and into storage
 const featured = document.querySelector('.featured');
 const brands = featured.querySelectorAll('a');
@@ -45,6 +46,10 @@ for (let i=0; i<brands.length; i++) {
     productsBrand(brand);
 }
 
+const basketImage = document.getElementById('basketImage');
+basketImage.addEventListener('click', () =>{
+document.getElementById('drawer').className = 'overlay visible';
+})
 
 // select all buttonsItems from DOM for click
 const selectedButtons = selectorButtons();
