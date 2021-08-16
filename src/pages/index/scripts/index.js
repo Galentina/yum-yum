@@ -4,6 +4,8 @@ import {Dish} from "./counter";
 import {Storage} from "../../storage";
 import {productsBrand} from "./currentBrand";
 import {selectorButtons} from "./selector";
+import {checkList} from "./checkList";
+import {removeAllChildrenFromNode} from "./removeAllChildrenFromNode";
 
 
 export let storage = new Storage();
@@ -37,7 +39,11 @@ function addCount(imageId){
     return orders;
 }
 
+//_________________________________
+//Basket = 0
 document.getElementById('basket').innerHTML = '0';
+
+//_________________________________
 // upload a chosen brand on the page and into storage
 const featured = document.querySelector('.featured');
 const brands = featured.querySelectorAll('a');
@@ -46,14 +52,8 @@ for (let i=0; i<brands.length; i++) {
     productsBrand(brand);
 }
 
-const basketImage = document.getElementById('basketImage');
-basketImage.addEventListener('click', () =>{
-document.getElementById('drawer').className = 'overlay visible';
-})
-
 // select all buttonsItems from DOM for click
 const selectedButtons = selectorButtons();
-
 // button is selected and function addCount is requested
 for (let i=0; i<selectedButtons.length; i++) {
     const button = selectedButtons[i];
@@ -62,6 +62,35 @@ for (let i=0; i<selectedButtons.length; i++) {
         addCount(id);
     });
 }
+
+//_________________________________
+//window Drawer, show all chosen items
+const basketImage = document.getElementById('basketImage');
+basketImage.addEventListener('click', () =>{
+    document.getElementById('drawer').className = 'overlay visible';
+    const orders = storage.getItems('order');
+    if (orders && orders.length!==0){
+        //delete old list of items from basket
+        let element = document.getElementById('orderList');
+        element = removeAllChildrenFromNode( element );
+        document.getElementById('orderList').replaceWith(element);
+        // set new list of items into basket
+        checkList(orders);
+    }
+});
+
+
+const closeDrawer = document.getElementById('closeDrawer');
+closeDrawer.addEventListener('click', () =>{
+    document.getElementById('drawer').className = 'overlay';
+});
+//_________________________________
+
+const moreTreats = document.getElementById('moreTreats');
+moreTreats.addEventListener('click', ()=>{
+    document.getElementById('drawer').className = 'overlay';
+});
+
 
 
 console.log('index');
