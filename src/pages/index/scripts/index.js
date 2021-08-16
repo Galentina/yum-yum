@@ -6,11 +6,15 @@ import {productsBrand} from "./currentBrand";
 import {selectorButtons} from "./selector";
 import {checkList} from "./checkList";
 import {removeAllChildrenFromNode} from "./removeAllChildrenFromNode";
+import {deliveryWay, location} from "./elements";
+import {finalPrice} from "./finalPrice";
+import {deliveryObject} from "./deliveryObject";
 
 
 export let storage = new Storage();
 
 storage.setItems('current products', dominosArray);
+storage.setItems('delivery', {place: "Amsterdam", delivery: "Take away"});
 
 // Add product to storage
 function addCount(imageId){
@@ -42,6 +46,11 @@ function addCount(imageId){
 //_________________________________
 //Basket = 0
 document.getElementById('basket').innerHTML = '0';
+
+//_________________________________
+//delivery form into storage
+deliveryObject();
+
 
 //_________________________________
 // upload a chosen brand on the page and into storage
@@ -85,20 +94,19 @@ closeDrawer.addEventListener('click', () =>{
     document.getElementById('drawer').className = 'overlay';
 });
 //_________________________________
+// Final price
 
 const moreTreats = document.getElementById('moreTreats');
 moreTreats.addEventListener('click', ()=>{
     document.getElementById('drawer').className = 'overlay';
 });
 
-const finalPrice = document.getElementById('spPrice');
-const aboutPrice = storage.getItems('order');
-let sum = 0;
-if (aboutPrice){
-    console.log("length", aboutPrice.length);
-    aboutPrice.map(el => sum = Number(el.price) * Number(el.count) + sum);
-}
-finalPrice.innerHTML = '  (' + `${sum}` + '&#8364;)';
+
+
+// finalPrice.innerHTML = '  (' + `${sum}` + '&#8364;)';
+
+//_________________________________
+
 
 
 console.log('index');

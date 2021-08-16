@@ -31,18 +31,18 @@
         <div class="top-bar__left">
           <div class="select">
             <img class="select__icon" src="img/icons/location.svg" alt="">
-            <select class="select__field" name="location">
-              <option class="select__option" value="">Amsterdam</option>
-              <option class="select__option" value="">Utrecht</option>
-              <option class="select__option" value="">Rotterdam</option>
+            <select id="location" class="select__field" name="location">
+              <option class="select__option" value="Amsterdam">Amsterdam</option>
+              <option class="select__option" value="Utrecht">Utrecht</option>
+              <option class="select__option" value="Rotterdam">Rotterdam</option>
             </select>
           </div>
 
           <div class="select">
             <img class="select__icon" src="img/icons/shopping-bag.svg" alt="">
-            <select class="select__field" name="delivery-option">
-              <option class="select__option" value="">Take away</option>
-              <option class="select__option" value="">Delivery</option>
+            <select id="deliveryWay" class="select__field" name="delivery-option">
+              <option class="select__option" value="Take away">Take away</option>
+              <option class="select__option" value="Delivery">Delivery</option>
             </select>
           </div>
         </div>
@@ -256,7 +256,7 @@
           <img src="img/icons/delivery.svg" alt="">
           <div class="delivery-price__info">
             <span class="delivery-price__title">Delivery</span>
-            <span>5 &#8364;</span>
+            <span id="deliveryPrice">5 &#8364;</span>
           </div>
         </div>
 

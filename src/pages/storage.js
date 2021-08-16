@@ -1,6 +1,7 @@
 
 // class storage for chosen brand and for orders
 import {selectorCounters} from "./index/scripts/selector";
+import {finalPrice} from "./index/scripts/finalPrice";
 
 export class Storage {
     getItems(key) {
@@ -32,6 +33,7 @@ export class Storage {
             updateStorage.push(item);
         }
         this.setItems('order',updateStorage);
+        finalPrice();
     }
 
     removeItem(item){
@@ -48,7 +50,8 @@ export class Storage {
         const updateStorage = this.getItems('order');
         const newUpdate = updateStorage.filter(el => el.id !==item.id && el.title !== item.title);
         this.setItems('order', newUpdate);
+        finalPrice();
     }
-}
+};
 
 
