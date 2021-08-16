@@ -1,43 +1,43 @@
 [
     {
         "id": 1,
-        "price": 131,
-        "title": "9 стрипсов",
+        "price": 4,
+        "title": "9 Crispy Tenders",
         "img": "img/kfc-1.png",
         "count": 0
     },
     {
         "id": 2,
-        "price": 77,
-        "title": "3 ножки",
+        "price": 3,
+        "title": "3 pc original",
         "img": "img/kfc-2.png",
         "count": 0
     },
     {
         "id": 3,
-        "price": 75,
-        "title": "Байтс Барбекю",
+        "price": 2,
+        "title": "Bites BBQ",
         "img": "img/kfc-3.png",
         "count": 0
     },
     {
         "id": 4,
-        "price": 225,
-        "title": "Бакет Дуэт",
+        "price": 10,
+        "title": "Big Mix Bucket",
         "img": "img/kfc-4.png",
         "count": 0
     },
     {
         "id": 5,
-        "price": 93,
-        "title": "Дабл Шефбургер",
+        "price": 5,
+        "title": "Double Chef Burger",
         "img": "img/kfc-5.png",
         "count": 0
     },
     {
         "id": 6,
-        "price": 65,
-        "title": "Твистер",
+        "price": 3,
+        "title": "Twister",
         "img": "img/kfc-6.png",
         "count": 0
     }

@@ -19,6 +19,10 @@
       background-color: darken($color-primary, 10%);
     }
 
+    &--hidden {
+      display: none;
+    }
+
     &--decrease {
       background-image: url("../assets/icons/minus.svg");
       background-repeat: no-repeat;

@@ -9,19 +9,19 @@
   <body>
   <div class="wrapper">
     <aside class="aside">
-      <a href="/" class="logo"><img src="img/logo-main.png" alt="Ням-ням лого"></a>
+      <a href="/" class="logo"><img src="img/logo-main.png" alt="Yum-yum logo"></a>
       <nav class="navigation">
-        <a class="navigation__item navigation__item--choice selected" href="/">Выбор</a>
-        <a class="navigation__item navigation__item--saved disabled" href="#">Сохраненное</a>
-        <a class="navigation__item navigation__item--orders" href="orders.html">Заказы</a>
-        <a class="navigation__item navigation__item--email disabled" href="#">Сообщения</a>
-        <a class="navigation__item navigation__item--settings disabled" href="#">Настройки</a>
+        <a class="navigation__item navigation__item--choice selected" href="/">Options</a>
+        <a class="navigation__item navigation__item--saved disabled" href="#">Your choice</a>
+        <a class="navigation__item navigation__item--orders" href="orders.html">Orders</a>
+        <a class="navigation__item navigation__item--email disabled" href="#">Messages</a>
+        <a class="navigation__item navigation__item--settings disabled" href="#">Settings</a>
       </nav>
       <div class="user">
         <img class="user__image" src="img/user.svg" alt="">
         <div>
-          <div class="user__name">Иван Вкуснолюбов</div>
-          <div>ivkusnoljubov@lectrum.io</div>
+          <div class="user__name">GM</div>
+          <div>gala.malareva@gmail.com</div>
         </div>
       </div>
     </aside>
@@ -32,17 +32,17 @@
           <div class="select">
             <img class="select__icon" src="img/icons/location.svg" alt="">
             <select class="select__field" name="location">
-              <option class="select__option" value="">Минск, Белоруссия</option>
-              <option class="select__option" value="">Минск, Белоруссия</option>
-              <option class="select__option" value="">Минск, Белоруссия</option>
+              <option class="select__option" value="">Amsterdam</option>
+              <option class="select__option" value="">Utrecht</option>
+              <option class="select__option" value="">Rotterdam</option>
             </select>
           </div>
 
           <div class="select">
             <img class="select__icon" src="img/icons/shopping-bag.svg" alt="">
             <select class="select__field" name="delivery-option">
-              <option class="select__option" value="">Забрать с собой</option>
-              <option class="select__option" value="">Доставить домой</option>
+              <option class="select__option" value="">Take away</option>
+              <option class="select__option" value="">Delivery</option>
             </select>
           </div>
         </div>
@@ -50,7 +50,7 @@
         <div class="top-bar__right">
           <div class="input">
             <img class="input__icon" src="img/icons/search.svg" alt="">
-            <input class="input__field" type="text" placeholder="Найти что-нибудь вкусное">
+            <input class="input__field" type="text" placeholder="Find something tasty">
           </div>
           <button class="icon-button icon-button--orange">
             <img src="img/icons/shopping-cart.svg" alt="">
@@ -60,9 +60,9 @@
       </div>
 
       <section>
-        <h2 class="h2">Рекомендуем</h2>
-        <div class="featured">
-          <a href="#" class="featured__item featured-item">
+        <h2 class="h2">Recommended</h2>
+        <div class="featured" >
+          <a href="#" class="featured__item featured-item active" id="dominoItem">
             <img class="featured-item__img" src="img/logo-pizza.png" alt="Domino’s Pizza">
             <div class="featured-item__info">
               <h4 class="h4">Domino’s Pizza</h4>
@@ -71,18 +71,18 @@
                 <span class="featured-info__icon-item featured-info__icon-item--rate">
                   <span class="featured-info__average">5,0</span>(736)
                 </span>
-                <span class=" featured-info__icon-item featured-info__icon-item--category">Пицца</span>
-                <span class="featured-info__icon-item featured-info__icon-item--money">$$</span>
+                <span class=" featured-info__icon-item featured-info__icon-item--category">Pizza</span>
+                <span class="featured-info__icon-item featured-info__icon-item--money">&#8364;</span>
               </div>
 
               <div class="featured-info__block">
-                <span class="badge badge--orange">бесплатная доставка</span>
+                <span class="badge badge--orange">Free shipping</span>
                 <span class="featured-info__icon-item featured-info__icon-item--distance">2,8 км</span>
               </div>
             </div>
           </a>
 
-          <a href="#" class="featured__item featured-item">
+          <a href="#" class="featured__item featured-item" id="mcDonaldItem">
             <img class="featured-item__img" src="img/logo-mac.png" alt="McDonald’s">
             <div class="featured-item__info">
               <h4 class="h4">McDonald’s</h4>
@@ -91,18 +91,18 @@
                 <span class="featured-info__icon-item featured-info__icon-item--rate">
                   <span class="featured-info__average">4,1</span>(959)
                 </span>
-                <span class=" featured-info__icon-item featured-info__icon-item--category">Бургеры</span>
-                <span class="featured-info__icon-item featured-info__icon-item--money">$</span>
+                <span class=" featured-info__icon-item featured-info__icon-item--category">Burgers</span>
+                <span class="featured-info__icon-item featured-info__icon-item--money">&#8364;</span>
               </div>
 
               <div class="featured-info__block">
-                <span class="badge badge--purple">20 грн доставка</span>
+                <span class="badge badge--purple">5 &#8364; delivery</span>
                 <span class="featured-info__icon-item featured-info__icon-item--distance">9,0 км</span>
               </div>
             </div>
           </a>
 
-          <a href="#" class="featured__item featured-item">
+          <a href="#" class="featured__item featured-item" id="kfcItem">
             <img class="featured-item__img" src="img/logo-kfc.png" alt="KFC">
 
             <div class="featured-item__info featured-info">
@@ -112,12 +112,12 @@
                 <span class="featured-info__icon-item featured-info__icon-item--rate">
                   <span class="featured-info__average">4,4</span>(583)
                 </span>
-                <span class=" featured-info__icon-item featured-info__icon-item--category">Курица</span>
-                <span class="featured-info__icon-item featured-info__icon-item--money">$</span>
+                <span class=" featured-info__icon-item featured-info__icon-item--category">Chicken</span>
+                <span class="featured-info__icon-item featured-info__icon-item--money">&#8364;</span>
               </div>
 
               <div class="featured-info__block">
-                <span class="badge badge--orange">бесплатная доставка</span>
+                <span class="badge badge--orange">Free shipping</span>
                 <span class="featured-info__icon-item featured-info__icon-item--distance">18,6 км</span>
               </div>
             </div>
@@ -127,79 +127,87 @@
 
       <section class="tabs">
         <div class="tabs__heading">
-          <button class="tabs__button active">Популярное (8)</button>
-          <button class="tabs__button disabled">Бургеры (0)</button>
-          <button class="tabs__button disabled">Картошка (0)</button>
-          <button class="tabs__button disabled">Напитки (0)</button>
-          <button class="tabs__button disabled">Наггетсы (0)</button>
+          <button class="tabs__button active">Popular (8)</button>
+          <button class="tabs__button disabled">Burgers (0)</button>
+          <button class="tabs__button disabled">French fries (0)</button>
+          <button class="tabs__button disabled">The drinks (0)</button>
+          <button class="tabs__button disabled">Nuggets (0)</button>
         </div>
         <div class="tabs__content">
           <div class="dish">
-            <img class="dish__image" src="img/pizza-1.jpg" alt="">
-            <div class="dish__title">Chef’s Burger Deluxe</div>
+            <img id="i1" class="dish__image" src="img/pizza-1.jpg" alt="">
+            <div id="t1" class="dish__title">Chef’s Burger Deluxe</div>
             <div class="dish__info">
-              <div class="dish__price">149 грн</div>
+              <div id="p1" class="dish__price">10 &#8364;</div>
               <div class="counter">
-                <button class="counter__button counter__button--increase"></button>
+                <button style="display: none;" id="10" class="counter__button counter__button--decrease"></button>
+                <span id="1" class="counter__number">0</span>
+                <button id="11" class="counter__button counter__button--increase"></button>
               </div>
             </div>
           </div>
 
           <div class="dish">
-            <img class="dish__image" src="img/pizza-2.jpg" alt="">
-            <div class="dish__title">Peperoni Pie</div>
+            <img id="i2" class="dish__image" src="img/pizza-2.jpg" alt="">
+            <div id="t2" class="dish__title">Peperoni Pie</div>
             <div class="dish__info">
-              <div class="dish__price">127 грн</div>
+              <div id="p2" class="dish__price">7 &#8364;</div>
               <div class="counter">
-                <button class="counter__button counter__button--decrease"></button>
-                <span class="counter__number">2</span>
-                <button class="counter__button counter__button--increase"></button>
+                <button style="display: none;" id="20" class="counter__button counter__button--decrease"></button>
+                <span id="2" class="counter__number">0</span>
+                <button id="21" class="counter__button counter__button--increase"></button>
               </div>
             </div>
           </div>
 
           <div class="dish">
-            <img class="dish__image" src="img/pizza-3.jpg" alt="">
-            <div class="dish__title">Chicken Grill</div>
+            <img id="i3" class="dish__image" src="img/pizza-3.jpg" alt="">
+            <div id="t3" class="dish__title">Chicken Grill</div>
             <div class="dish__info">
-              <div class="dish__price">209 грн</div>
+              <div id="p3" class="dish__price">11 &#8364;</div>
               <div class="counter">
-                <button class="counter__button counter__button--decrease"></button>
-                <span class="counter__number">4</span>
-                <button class="counter__button counter__button--increase"></button>
+                <button style="display: none;" id="30" class="counter__button counter__button--decrease"></button>
+                <span id="3" class="counter__number">0</span>
+                <button id="31" class="counter__button counter__button--increase"></button>
               </div>
             </div>
           </div>
 
           <div class="dish">
-            <img class="dish__image" src="img/pizza-4.jpg" alt="">
-            <div class="dish__title">Chef’s Burger Deluxe</div>
+            <img id="i4" class="dish__image" src="img/pizza-4.jpg" alt="">
+            <div id="t4" class="dish__title">Chef’s Burger Deluxe</div>
             <div class="dish__info">
-              <div class="dish__price">127 грн</div>
+              <div id="p4" class="dish__price">9 &#8364;</div>
               <div class="counter">
-                <button class="counter__button counter__button--increase"></button>
+                <button style="display: none;" id='40' class="counter__button counter__button--decrease"></button>
+                <span id="4" class="counter__number">0</span>
+                <button id="41" class="counter__button counter__button--increase"></button>
               </div>
             </div>
           </div>
 
           <div class="dish">
-            <img class="dish__image" src="img/pizza-5.jpg" alt="">
-            <div class="dish__title">Chef’s Burger Deluxe</div>
+            <img id="i5" class="dish__image" src="img/pizza-5.jpg" alt="">
+            <div id="t5" class="dish__title">Chef’s Burger Deluxe</div>
             <div class="dish__info">
-              <div class="dish__price">127 грн</div>
+              <div id="p5" class="dish__price">8 &#8364;</div>
               <div class="counter">
-                <button class="counter__button counter__button--increase"></button>
+                <button style="display: none;" id="50" class="counter__button counter__button--decrease"></button>
+                <span id="5" class="counter__number">0</span>
+                <button id="51" class="counter__button counter__button--increase"></button>
               </div>
             </div>
           </div>
 
           <div class="dish">
-            <img class="dish__image" src="img/pizza-6.jpg" alt="">
-            <div class="dish__title">Chef’s Burger Deluxe</div>
+            <img id="i6" class="dish__image" src="img/pizza-6.jpg" alt="">
+            <div id="t6" class="dish__title">Chef’s Burger Deluxe</div>
             <div class="dish__info">
-              <div class="dish__price">127 грн</div>
+              <div id="p6" class="dish__price">9 &#8364;</div>
               <div class="counter">
-                <button class="counter__button counter__button--increase"></button>
+                <button style="display: none;" id="60" class="counter__button counter__button--decrease"></button>
+                <span id="6" class="counter__number">0</span>
+                <button id="61" class="counter__button counter__button--increase"></button>
               </div>
             </div>
           </div>
@@ -218,8 +226,8 @@
         </div>
 
         <div class="delivery-option">
-          <div class="delivery-option__title">Доставить</div>
-          <div>по домашнему адресу</div>
+          <div class="delivery-option__title">Delivery</div>
+          <div>at the address</div>
         </div>
 
         <h2 class="h2">McDonald’s</h2>
@@ -229,7 +237,7 @@
             <span class="order-item__quantity">1 X</span>
             <div class="order-item__info">
               <h3 class="order-item__title h3">Peperoni Pie</h3>
-              <div class="order-item__price">123 грн</div>
+              <div class="order-item__price">7 &#8364;</div>
             </div>
             <button class="icon-button icon-button--red"><img src="img/icons/delete.svg" alt=""></button>
           </div>
@@ -239,7 +247,7 @@
             <span class="order-item__quantity">2 X</span>
             <div class="order-item__info">
               <h3 class="order-item__title h3">Cheese Pie</h3>
-              <div class="order-item__price">157 грн</div>
+              <div class="order-item__price">8 &#8364;</div>
             </div>
             <button class="icon-button icon-button--red"><img src="img/icons/delete.svg" alt=""></button>
           </div>
@@ -253,19 +261,19 @@
         <div class="delivery-price">
           <img src="img/icons/delivery.svg" alt="">
           <div class="delivery-price__info">
-            <span class="delivery-price__title">Доставка</span>
-            <span>20 грн</span>
+            <span class="delivery-price__title">Delivery</span>
+            <span>5 &#8364;</span>
           </div>
         </div>
 
         <div class="drawer__footer">
           <div class="textarea">
-            <label class="textarea__label" for="comments">Ваши пожелания</label>
+            <label class="textarea__label" for="comments">Your suggestions</label>
             <textarea class="textarea__field" name="comments" id="comments"></textarea>
           </div>
 
           <button class="button">
-            <span class="button__label">Оформить заказ</span> (303 грн)
+            <span class="button__label">Checkout</span> (303 грн)
           </button>
         </div>
       </div>
