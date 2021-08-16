@@ -9,6 +9,7 @@ export class Dish {
         this.title = item.title;
         this.img = item.img;
         this.#count = item.count;
+        this.restaurant = item.restaurant;
     }
 
     getCount = () => {
@@ -25,7 +26,14 @@ export class Dish {
             switch (sign) {
                 case 1: {
                     this.#count = this.getCount() + 1;
-                    storage.addItem({id: this.id, price: this.price, title: this.title, image: this.img, count: this.#count});
+                    storage.addItem({
+                        id: this.id,
+                        price: this.price,
+                        title: this.title,
+                        image: this.img,
+                        count: this.#count,
+                        restaurant: this.restaurant
+                    });
                     break;
                 }
                 case 0: {
@@ -36,7 +44,8 @@ export class Dish {
                             price: this.price,
                             title: this.title,
                             image: this.img,
-                            count: this.#count
+                            count: this.#count,
+                            restaurant: this.restaurant
                         });
                     } else {this.#count = 1;
                         this.#count = this.getCount() - 1;
@@ -44,7 +53,14 @@ export class Dish {
                         const quantities = selectorCounters();
                         quantities.map(el => el.id !==this.id ? el.innerHTML = '0': el) ;
                         document.getElementById(`${this.id*10}`).style.display = 'none';
-                        storage.deleteItem({id: this.id, price: this.price, title: this.title, image: this.img, count: this.#count});
+                        storage.deleteItem({
+                            id: this.id,
+                            price: this.price,
+                            title: this.title,
+                            image: this.img,
+                            count: this.#count,
+                            restaurant: this.restaurant
+                        });
                     }
                         break;
                 }

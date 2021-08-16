@@ -4,41 +4,47 @@
         "price": 10,
         "title": "Pizza con pomodori e salame piccante",
         "img": "img/pizza-1.jpg",
-        "count": 0
+        "count": 0,
+        "restaurant": "Domino Pizza"
     },
     {
         "id": 2,
         "price": 7,
         "title": "Pizza Margherita",
         "img": "img/pizza-2.jpg",
-        "count": 0
+        "count": 0,
+        "restaurant": "Domino Pizza"
     },
     {
         "id": 3,
         "price": 11,
         "title": "Pizza texana",
         "img": "img/pizza-3.jpg",
-        "count": 0
+        "count": 0,
+        "restaurant": "Domino Pizza"
     },
     {
         "id": 4,
         "price": 9,
         "title": "Pizza 'Pepperoni Blues'",
         "img": "img/pizza-4.jpg",
-        "count": 0
+        "count": 0,
+        "restaurant": "Domino Pizza"
     },
     {
         "id": 5,
         "price": 8,
         "title": "Pizza Hawaii",
         "img": "img/pizza-5.jpg",
-        "count": 0
+        "count": 0,
+        "restaurant": "Domino Pizza"
     },
     {
         "id": 6,
         "price": 9,
         "title": "Pizza 'Paparazzi'",
         "img": "img/pizza-6.jpg",
-        "count": 0
+        "count": 0,
+        "restaurant": "Domino Pizza"
     }
 ]

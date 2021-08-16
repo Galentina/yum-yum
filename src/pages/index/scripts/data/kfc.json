@@ -4,41 +4,47 @@
         "price": 4,
         "title": "9 Crispy Tenders",
         "img": "img/kfc-1.png",
-        "count": 0
+        "count": 0,
+        "restaurant": "KFC"
     },
     {
         "id": 2,
         "price": 3,
         "title": "3 pc original",
         "img": "img/kfc-2.png",
-        "count": 0
+        "count": 0,
+        "restaurant": "KFC"
     },
     {
         "id": 3,
         "price": 2,
         "title": "Bites BBQ",
         "img": "img/kfc-3.png",
-        "count": 0
+        "count": 0,
+        "restaurant": "KFC"
     },
     {
         "id": 4,
         "price": 10,
         "title": "Big Mix Bucket",
         "img": "img/kfc-4.png",
-        "count": 0
+        "count": 0,
+        "restaurant": "KFC"
     },
     {
         "id": 5,
         "price": 5,
         "title": "Double Chef Burger",
         "img": "img/kfc-5.png",
-        "count": 0
+        "count": 0,
+        "restaurant": "KFC"
     },
     {
         "id": 6,
         "price": 3,
         "title": "Twister",
         "img": "img/kfc-6.png",
-        "count": 0
+        "count": 0,
+        "restaurant": "KFC"
     }
 ]

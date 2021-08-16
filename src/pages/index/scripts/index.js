@@ -91,6 +91,14 @@ moreTreats.addEventListener('click', ()=>{
     document.getElementById('drawer').className = 'overlay';
 });
 
+const finalPrice = document.getElementById('spPrice');
+const aboutPrice = storage.getItems('order');
+let sum = 0;
+if (aboutPrice){
+    console.log("length", aboutPrice.length);
+    aboutPrice.map(el => sum = Number(el.price) * Number(el.count) + sum);
+}
+finalPrice.innerHTML = '  (' + `${sum}` + '&#8364;)';
 
 
 console.log('index');

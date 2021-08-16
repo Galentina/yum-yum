@@ -4,41 +4,47 @@
         "price": 3,
         "title": "Big Kansas",
         "img": "img/mac-1.jpg",
-        "count": 0
+        "count": 0,
+        "restaurant": "McDonald's"
     },
     {
         "id": 2,
         "price": 4,
         "title": "Double Chicken Kentucky",
         "img": "img/mac-2.jpg",
-        "count": 0
+        "count": 0,
+        "restaurant": "McDonald's"
     },
     {
         "id": 3,
         "price": 3,
         "title": "Hamburger",
         "img": "img/mac-3.jpg",
-        "count": 0
+        "count": 0,
+        "restaurant": "McDonald's"
     },
     {
         "id": 4,
         "price": 5,
         "title": "Royal Cheeseburger",
         "img": "img/mac-4.jpg",
-        "count": 0
+        "count": 0,
+        "restaurant": "McDonald's"
     },
     {
         "id": 5,
         "price": 4,
         "title": "Roll with shrimps",
         "img": "img/mac-5.jpg",
-        "count": 0
+        "count": 0,
+        "restaurant": "McDonald's"
     },
     {
         "id": 6,
         "price": 3,
         "title": "Chicken Roll",
         "img": "img/mac-6.jpg",
-        "count": 0
+        "count": 0,
+        "restaurant": "McDonald's"
     }
 ]
