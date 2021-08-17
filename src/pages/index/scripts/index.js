@@ -82,6 +82,7 @@ basketImage.addEventListener('click', () =>{
         //delete old list of items from basket
         let element = document.getElementById('orderList');
         element = removeAllChildrenFromNode( element );
+        console.log(element);
         document.getElementById('orderList').replaceWith(element);
         // set new list of items into basket
         checkList(orders);
@@ -103,24 +104,6 @@ moreTreats.addEventListener('click', ()=>{
     document.getElementById('drawer').className = 'overlay';
 });
 
-
-//_________________________________
-//Delete item from order list
-// const orderList = document.getElementById('orderList');
-// console.log('bin', orderList);
-// const bin = orderList.getElementsByTagName('button') || [];
-// console.log('bin', bin);
-// for (let i=0; i<bin.length; i++) {
-//     bin[i].addEventListener('click', () => {
-//         // const id = bin[i].id[0];
-//
-//         const item = document.getElementById(`${id}item`);
-//         let id = item.querySelector('h4').innerHTML;
-//         let title = item.querySelector('h3').innerHTML;
-//         let restaurant = item.querySelector('h2').innerHTML;
-//         storage.deleteItem({id: id, title: title, restaurant: restaurant });
-//     })
-// }
 
 
 

@@ -42,6 +42,6 @@ export const deleteItemFromList = () => {
             removeAllChildrenFromNode();
             const orders = storage.getItems('order');
             checkList(orders);
-        })
+        });
     }
 };

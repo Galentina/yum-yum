@@ -1,5 +1,6 @@
+import {finalPrice} from "./finalPrice";
 
-export function removeAllChildrenFromNode (node) {
+export function removeAllChildrenFromNode (node = []) {
         let shell;
         // do not copy the contents
         shell = node.cloneNode(false);

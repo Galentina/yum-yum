@@ -4,10 +4,8 @@ import {deliveryObject} from "./deliveryObject";
 export const finalPrice = () => {
     deliveryObject();
     const aboutDelivery = storage.getItems('delivery');
-    console.log(aboutDelivery);
     const aboutFinalPrice = document.getElementById('spPrice');
     const aboutPrice = storage.getItems('order');
-    console.log(aboutPrice);
 
     const delPrice = document.getElementById('deliveryPrice');
     (aboutDelivery.delivery === 'Delivery') ? delPrice.innerHTML = '5 ' + '&#8364' : delPrice.innerHTML = '0 ' + '&#8364';
@@ -17,6 +15,6 @@ export const finalPrice = () => {
         if (aboutDelivery.delivery === 'Delivery') {
             sum = sum + 5;
         }
-        aboutFinalPrice.innerHTML = '  (' + `${sum}` + '&#8364;)';
-    }
+
+    } aboutFinalPrice.innerHTML = '  (' + `${sum}` + '&#8364;)';
 };

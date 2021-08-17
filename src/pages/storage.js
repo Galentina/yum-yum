@@ -55,8 +55,6 @@ export class Storage {
 
         this.setItems('order', newUpdate);
         finalPrice();
-        // removeAllChildrenFromNode();
-        // checkList(newUpdate);
     }
 };
 
