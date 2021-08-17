@@ -56,6 +56,10 @@ export class Storage {
         this.setItems('order', newUpdate);
         finalPrice();
     }
+
+    setFinalCheckout(item){
+        localStorage.setItem('checkout', JSON.stringify(item));
+    }
 };
 
 

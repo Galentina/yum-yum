@@ -9,6 +9,7 @@ import {removeAllChildrenFromNode} from "./removeAllChildrenFromNode";
 import {deliveryWay, location} from "./elements";
 import {finalPrice} from "./finalPrice";
 import {deliveryObject} from "./deliveryObject";
+import {doCheckout} from "./doCheckout";
 
 
 export let storage = new Storage();
@@ -91,10 +92,14 @@ basketImage.addEventListener('click', () =>{
 });
 
 
+const checkout = document.getElementById('finalPrice');
+checkout.addEventListener('click', ()=>{
+    doCheckout();
+})
+
 const closeDrawer = document.getElementById('closeDrawer');
 closeDrawer.addEventListener('click', () =>{
     document.getElementById('drawer').className = 'overlay';
-    finalPrice();
 });
 //_________________________________
 // Final price
