@@ -1,11 +1,8 @@
 
 // class storage for chosen brand and for orders
-import {selectorCounters} from "./index/scripts/selector";
 import {finalPrice} from "./index/scripts/finalPrice";
-import {checkList, deleteItemFromList} from "./index/scripts/checkList";
-import {removeAllChildrenFromNode} from "./index/scripts/removeAllChildrenFromNode";
 
-export class Storage {
+class Storage {
     getItems(key) {
         return JSON.parse(localStorage.getItem(key));
     };
@@ -62,4 +59,7 @@ export class Storage {
     }
 };
 
+const storage = new Storage(); 
+
+export { storage };
 

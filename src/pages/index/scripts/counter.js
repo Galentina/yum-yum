@@ -1,4 +1,4 @@
-import {storage} from "./index";
+import {storage} from "../../storage";
 import {selectorCounters} from "./selector";
 
 export class Dish {

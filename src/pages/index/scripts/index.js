@@ -3,7 +3,7 @@
 import '../../../styles/index.scss';
 import dominosArray from './data/dominos.json';
 import {Dish} from "./counter";
-import {Storage} from "../../storage";
+import {storage} from "../../storage";
 import {productsBrand} from "./currentBrand";
 import {selectorButtons} from "./selector";
 import {checkList, deleteItemFromList} from "./checkList";
@@ -11,11 +11,6 @@ import {removeAllChildrenFromNode} from "./removeAllChildrenFromNode";
 import {deliveryObject} from "./deliveryObject";
 import {doCheckout} from "./doCheckout";
 
-
-
-
-
-export let storage = new Storage();
 
 storage.setItems('current products', dominosArray);
 storage.setItems('delivery', {place: "Amsterdam", delivery: "Take away"});

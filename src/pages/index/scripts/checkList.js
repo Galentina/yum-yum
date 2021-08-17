@@ -1,7 +1,7 @@
 
 
 // show all chosen items, creating additional DOM elements
-import {storage} from "./index";
+import {storage} from "../../storage";
 import {removeAllChildrenFromNode} from "./removeAllChildrenFromNode";
 
 export const checkList = (orders) => {

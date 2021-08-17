@@ -1,4 +1,4 @@
-import {storage} from "./index";
+import {storage} from "../../storage";
 import {deliveryObject} from "./deliveryObject";
 
 export const finalPrice = () => {

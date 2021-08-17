@@ -3,7 +3,7 @@ import {Dish} from "./counter";
 import {dominoItem, kfcItem, mcDonaldItem} from "./elements";
 import macArray from "./data/mac.json";
 import kfcArray from "./data/kfc.json";
-import {storage} from "./index";
+import {storage} from "../../storage";
 import {selectorCounters} from "./selector";
 
 //Change Brand

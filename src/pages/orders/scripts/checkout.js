@@ -12,9 +12,9 @@ export class Checkout {
             let arr = [];
             const data = items.map(el => {
                 el.orders.map(order => arr.push({id: order.id, price: order.price, title: order.title, count: order.count}))
-                console.log("orders val", data)
+                console.log("orders val", data);
             }); return data;
-        }
+        };
         const orderPlaces = [];
         items.map(el=> orderPlaces.push(el.restaurant));
         this.#orders = formatOrders();

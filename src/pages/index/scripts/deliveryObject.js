@@ -1,6 +1,6 @@
 import {deliveryWay, location} from "./elements";
 import {finalPrice} from "./finalPrice";
-import {storage} from "./index";
+import {storage} from "../../storage";
 
 
 export const deliveryObject = () =>{
