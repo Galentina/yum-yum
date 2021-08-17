@@ -4,7 +4,7 @@ import {Dish} from "./counter";
 import {Storage} from "../../storage";
 import {productsBrand} from "./currentBrand";
 import {selectorButtons} from "./selector";
-import {checkList} from "./checkList";
+import {checkList, deleteItemFromList} from "./checkList";
 import {removeAllChildrenFromNode} from "./removeAllChildrenFromNode";
 import {deliveryWay, location} from "./elements";
 import {finalPrice} from "./finalPrice";
@@ -85,6 +85,7 @@ basketImage.addEventListener('click', () =>{
         document.getElementById('orderList').replaceWith(element);
         // set new list of items into basket
         checkList(orders);
+        deleteItemFromList();
     }
 });
 
@@ -92,6 +93,7 @@ basketImage.addEventListener('click', () =>{
 const closeDrawer = document.getElementById('closeDrawer');
 closeDrawer.addEventListener('click', () =>{
     document.getElementById('drawer').className = 'overlay';
+    finalPrice();
 });
 //_________________________________
 // Final price
@@ -102,10 +104,24 @@ moreTreats.addEventListener('click', ()=>{
 });
 
 
-
-// finalPrice.innerHTML = '  (' + `${sum}` + '&#8364;)';
-
 //_________________________________
+//Delete item from order list
+// const orderList = document.getElementById('orderList');
+// console.log('bin', orderList);
+// const bin = orderList.getElementsByTagName('button') || [];
+// console.log('bin', bin);
+// for (let i=0; i<bin.length; i++) {
+//     bin[i].addEventListener('click', () => {
+//         // const id = bin[i].id[0];
+//
+//         const item = document.getElementById(`${id}item`);
+//         let id = item.querySelector('h4').innerHTML;
+//         let title = item.querySelector('h3').innerHTML;
+//         let restaurant = item.querySelector('h2').innerHTML;
+//         storage.deleteItem({id: id, title: title, restaurant: restaurant });
+//     })
+// }
+
 
 
 

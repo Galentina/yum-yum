@@ -2,6 +2,8 @@
 // class storage for chosen brand and for orders
 import {selectorCounters} from "./index/scripts/selector";
 import {finalPrice} from "./index/scripts/finalPrice";
+import {checkList, deleteItemFromList} from "./index/scripts/checkList";
+import {removeAllChildrenFromNode} from "./index/scripts/removeAllChildrenFromNode";
 
 export class Storage {
     getItems(key) {
@@ -44,13 +46,17 @@ export class Storage {
                 }
             }
         this.setItems('order',updateStorage);
+        finalPrice();
     }
 
     deleteItem(item){
         const updateStorage = this.getItems('order');
-        const newUpdate = updateStorage.filter(el => el.id !==item.id && el.title !== item.title);
+        const newUpdate = updateStorage.filter(el => el.title !== item.title || el.restaurant !== item.restaurant || el.id !==item.id);
+
         this.setItems('order', newUpdate);
         finalPrice();
+        // removeAllChildrenFromNode();
+        // checkList(newUpdate);
     }
 };
 
