@@ -1,3 +1,5 @@
+
+
 import '../../../styles/index.scss';
 import dominosArray from './data/dominos.json';
 import {Dish} from "./counter";
@@ -6,10 +8,11 @@ import {productsBrand} from "./currentBrand";
 import {selectorButtons} from "./selector";
 import {checkList, deleteItemFromList} from "./checkList";
 import {removeAllChildrenFromNode} from "./removeAllChildrenFromNode";
-import {deliveryWay, location} from "./elements";
-import {finalPrice} from "./finalPrice";
 import {deliveryObject} from "./deliveryObject";
 import {doCheckout} from "./doCheckout";
+
+
+
 
 
 export let storage = new Storage();
@@ -55,7 +58,7 @@ deliveryObject();
 
 //_________________________________
 // upload a chosen brand on the page and into storage
-const featured = document.querySelector('.featured');
+const featured = document.getElementById('featured');
 const brands = featured.querySelectorAll('a');
 for (let i=0; i<brands.length; i++) {
     const brand = brands[i];
