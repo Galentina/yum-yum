@@ -1,4 +1,5 @@
-// import {storage} from "../../index/scripts";
+import {storage} from "../../storage";
+import moment from 'moment';
 
 
 export class Checkout {
@@ -6,42 +7,33 @@ export class Checkout {
     #restaurants;
     #orders;
 
-    constructor(items, date){
-        // const dateOfOrder = storage.getItems('date').checkoutDate;
-        const formatOrders = () => {
-            let arr = [];
-            const data = items.map(el => {
-                el.orders.map(order => arr.push({id: order.id, price: order.price, title: order.title, count: order.count}))
-                console.log("orders val", data);
-            }); return data;
-        };
-        const orderPlaces = [];
-        items.map(el=> orderPlaces.push(el.restaurant));
-        this.#orders = formatOrders();
-        this.#checkoutTime = date;
-        this.#restaurants = orderPlaces;
-        this.ifOrderFinished = (Date.now() - this.#checkoutTime >= 6000);
+    constructor(){
+        const dateOfOrder = storage.getItems('date');
+
+        this.#orders = storage.getItems('orders');
+        this.#checkoutTime = dateOfOrder.checkoutDate;
+        this.#restaurants = ["McDonald's", "Domino Pizza", "KFC"];
+        this.ifOrderFinished = Math.floor(Math.abs((Date.now() - Date.parse(this.#checkoutTime))/60000)) >= 60;
     }
     getRestaurant = () =>{
         return this.#restaurants;
     }
     getCheckoutTime = () =>{
-        return Date.now() - this.#checkoutTime;
+        const remainTime =  Math.floor(Math.abs( 60 - (Date.now() - Date.parse(this.#checkoutTime))/60000));
+        console.log("remain", Date.now(), Date.parse(this.#checkoutTime));
+        return remainTime
+
     }
     getFormattedDate = () =>{
-        const formatDate = this.#checkoutTime.date + ' ' + this.#checkoutTime.getMonth() + ' ' + this.#checkoutTime.getFullYear();
-        console.log("form data", formatDate);
-        return formatDate;
+        return moment(Date.parse(this.#checkoutTime)).format('Do MMMM YYYY');
     }
     getFormattedTime = () => {
-        const formatDate = this.#checkoutTime.getHours() + ':' + this.#checkoutTime.getMinutes() + ':' + this.#checkoutTime.getSeconds();
-        console.log("form time",formatDate);
-        return formatDate;
+        return moment(Date.parse(this.#checkoutTime)).format('h:mm a');
     }
     getOrders = () => {
         return this.#orders;
     }
     getCheckoutTimePercent =() => {
-        return ((Date.now() - this.#checkoutTime)/6000)*100;
+        return Math.floor(this.getCheckoutTime()*5/3);
     }
 }

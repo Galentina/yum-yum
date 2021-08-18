@@ -54,12 +54,12 @@ class Storage {
         finalPrice();
     }
 
-    setFinalCheckout(item){
-        localStorage.setItem('checkout', JSON.stringify(item));
-    }
-};
+    // setFinalCheckout(item){
+    //     localStorage.setItem('checkout', JSON.stringify(item));
+    // }
+}
 
-const storage = new Storage(); 
+const storage = new Storage();
 
 export { storage };
 

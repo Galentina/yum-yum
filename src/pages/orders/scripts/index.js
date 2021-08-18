@@ -1,25 +1,32 @@
 import '../../../styles/index.scss';
-// import {storage} from "../../index/scripts";
-import {Checkout} from "./checkout";
-import {deliveryObject} from "../../index/scripts/deliveryObject";
+import { Checkout } from "./checkout";
+import { fromRestaurant } from "./fromRestaurants";
 
 
 
-// const dateOfOrder = storage.getItems('date').checkoutDate;
-// const finalOrders = storage.getItems('checkout');
-// console.log(finalOrders);
+
+const clientsInfo = new Checkout();
+const restaurants = clientsInfo.getRestaurant();
+
+//Recall class Checkout with setup of order info
+const timeSet = clientsInfo.getCheckoutTime();
+restaurants.map(el=> {
+    document.getElementById(el).innerHTML = String(timeSet);
+});
+
+//Day, time setup for restaurants.
+// Organizing Popular orders and Previous orders for restaurants
+restaurants.map(el=> {
+    document.getElementById(`d-${el}`).innerHTML = clientsInfo.getFormattedDate();
+    document.getElementById(`t-${el}`).innerHTML = clientsInfo.getFormattedTime();
+    fromRestaurant(el);
+})
 
 
-// const wholeClientsData = new Checkout(finalOrders, dateOfOrder);
+//Not used class functions
+const remainTime = clientsInfo.getCheckoutTimePercent();
+console.log("remainTime", remainTime);
 
-//__________ ____________________
 
-// const timeSet = wholeClientsData.getCheckoutTime();
-// document.getElementById('dom').innerHTML = timeSet;
-// document.getElementById('mc').innerHTML = timeSet;
-// document.getElementById('id="kfc"').innerHTML = timeSet;
-// console.log(timeSet);
-//
-document.getElementById('basket').innerHTML = '0';
 // deliveryObject();
 console.log('orders');

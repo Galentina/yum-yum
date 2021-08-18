@@ -54,7 +54,7 @@
         </div>
         <button class="icon-button icon-button--orange">
           <img src="img/icons/shopping-cart.svg" alt="">
-          <span id="basket" class="icon-button__badge">0</span>
+          <span class="icon-button__badge">0</span>
         </button>
       </div>
     </div>
@@ -62,7 +62,7 @@
     <section>
       <h2 class="h2">Popular orders</h2>
       <div class="coming-up">
-        <div class="coming-up__item coming-up-item">
+        <div id="r-Domino Pizza" class="coming-up__item coming-up-item">
           <div class="coming-up-item__header">
             <h4 class="h4">Domino’s Pizza</h4>
             <div class="badge badge--orange">Delivery</div>
@@ -72,7 +72,7 @@
             <img src="img/icons/clock.svg" alt="">
             <div class="coming-up-info__content">
               <div>You order will be delivered in</div>
-              <div id="dom" class="coming-up-info__title">14 min</div>
+              <div id="Domino Pizza" class="coming-up-info__title">14 min</div>
             </div>
           </div>
 
@@ -86,7 +86,7 @@
           </div>
         </div>
 
-        <div class="coming-up__item coming-up-item">
+        <div id="r-McDonald's" class="coming-up__item coming-up-item">
           <div class="coming-up-item__header">
             <h4 class="h4">McDonald’s</h4>
             <div class="badge badge--orange">Time for preparing</div>
@@ -96,7 +96,7 @@
             <img src="img/icons/clock.svg" alt="">
             <div class="coming-up-info__content">
               <div>You order will be delivered in</div>
-              <div id="mc" class="coming-up-info__title">37 min</div>
+              <div id="McDonald's" class="coming-up-info__title">37 min</div>
             </div>
           </div>
 
@@ -110,7 +110,7 @@
           </div>
         </div>
 
-        <div class="coming-up__item coming-up-item">
+        <div id="r-KFC" class="coming-up__item coming-up-item">
           <div class="coming-up-item__header">
             <h4 class="h4">KFC</h4>
             <div class="badge badge--orange">Delivery</div>
@@ -120,7 +120,7 @@
             <img src="img/icons/clock.svg" alt="">
             <div class="coming-up-info__content">
               <div>You order will be delivered in</div>
-              <div id="kfc" class="coming-up-info__title">57 min</div>
+              <div id="KFC" class="coming-up-info__title">57 min</div>
             </div>
           </div>
 
@@ -139,76 +139,52 @@
     <section>
       <h2 class="h2">Previous orders</h2>
       <div class="previous">
-        <div class="previous__item previous-item">
+        <div id="w-Domino Pizza" class="previous__item previous-item">
           <div class="previous-item__header">
             <h4 class="h4">Domino’s Pizza</h4>
             <div class="badge badge--green">Completed</div>
           </div>
 
           <div class="previous-item-info">
-            <div class="previous-item-info__date">16 september 2021</div>
-            <div class="previous-item-info__time">11:54 PM</div>
+            <div id="d-Domino Pizza" class="previous-item-info__date">16 september 2021</div>
+            <div id="t-Domino Pizza" class="previous-item-info__time">11:54 PM</div>
           </div>
 
-          <ul class="previous-item-dishes">
-            <li class="previous-item-dishes__item">
-              <span class="previous-item-dishes__quantity">1</span>
-              Delicious Cheese Pie
-            </li>
-            <li class="previous-item-dishes__item">
-              <span class="previous-item-dishes__quantity">1</span>
-              Peperoni Pie
-            </li>
+          <ul id="list-Domino Pizza" class="previous-item-dishes">
           </ul>
         </div>
 
-        <div class="previous__item previous-item">
+        <div id="w-McDonald's" class="previous__item previous-item">
           <div class="previous-item__header">
             <h4 class="h4">McDonald’s</h4>
-            <div class="badge badge--red">Canceled</div>
+            <div class="badge badge--red">Completed</div>
           </div>
           <div class="previous-item-info">
-            <div class="previous-item-info__date">16 september 2021</div>
-            <div class="previous-item-info__time">11:54 PM</div>
+            <div id="d-McDonald's" class="previous-item-info__date">16 september 2021</div>
+            <div id="t-McDonald's" class="previous-item-info__time">11:54 PM</div>
           </div>
 
-          <ul class="previous-item-dishes">
-            <li class="previous-item-dishes__item">
-              <span class="previous-item-dishes__quantity">3</span>
-              Delicious Cheese Pie
-            </li>
-            <li class="previous-item-dishes__item">
-              <span class="previous-item-dishes__quantity">5</span>
-              Peperoni Pie
-            </li>
+          <ul id="list-McDonald's" class="previous-item-dishes">
           </ul>
 
-          <button class="previous-item-see-more">1 additional product</button>
+          <button style="display: none" class="previous-item-see-more">1 additional product</button>
 
         </div>
 
-        <div class="previous__item previous-item">
+        <div id="w-KFC" class="previous__item previous-item">
           <div class="previous-item__header">
             <h4 class="h4">KFC</h4>
             <div class="badge badge--green">Completed</div>
           </div>
           <div class="previous-item-info">
-            <div class="previous-item-info__date">16 september 2021</div>
-            <div class="previous-item-info__time">11:54 PM</div>
+            <div id="d-KFC" class="previous-item-info__date">16 september 2021</div>
+            <div id="t-KFC" class="previous-item-info__time">11:54 PM</div>
           </div>
 
-          <ul class="previous-item-dishes">
-            <li class="previous-item-dishes__item">
-              <span class="previous-item-dishes__quantity">3</span>
-              Delicious Cheese Pie
-            </li>
-            <li class="previous-item-dishes__item">
-              <span class="previous-item-dishes__quantity">1</span>
-              Peperoni Pie
-            </li>
+          <ul id="list-KFC" class="previous-item-dishes">
           </ul>
 
-          <button class="previous-item-see-more">5 additional products</button>
+          <button style="display: none" class="previous-item-see-more">5 additional products</button>
         </div>
       </div>
 
