@@ -10,11 +10,13 @@ export const finalPrice = () => {
     const delPrice = document.getElementById('deliveryPrice');
     (aboutDelivery.delivery === 'Delivery') ? delPrice.innerHTML = '5 ' + '&#8364' : delPrice.innerHTML = '0 ' + '&#8364';
     let sum = 0;
-    if (aboutPrice.length) {
+    if (aboutPrice && aboutPrice.length) {
         aboutPrice.map(el => sum = Number(el.price) * Number(el.count) + sum);
         if (aboutDelivery.delivery === 'Delivery') {
             sum = sum + 5;
         }
 
-    } aboutFinalPrice.innerHTML = '  (' + `${sum}` + '&#8364;)';
+    }
+    storage.setItems('final price', {sum: sum});
+    aboutFinalPrice.innerHTML = '  (' + `${sum}` + '&#8364;)';
 };

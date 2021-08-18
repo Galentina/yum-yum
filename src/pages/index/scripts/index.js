@@ -10,10 +10,17 @@ import {checkList, deleteItemFromList} from "./checkList";
 import {removeAllChildrenFromNode} from "./removeAllChildrenFromNode";
 import {deliveryObject} from "./deliveryObject";
 import {doCheckout} from "./doCheckout";
+import {finalPrice} from "./finalPrice";
 
-
+const fakeDate = new Date();
+storage.setItems('date', {checkoutDate: fakeDate});
 storage.setItems('current products', dominosArray);
-storage.setItems('delivery', {place: "Amsterdam", delivery: "Take away"});
+if (storage.getItems('delivery')) {
+    document.getElementById("location").value = storage.getItems('delivery').place;
+    document.getElementById("deliveryWay").value = storage.getItems('delivery').delivery;
+} else {
+    storage.setItems('delivery', {place: "Amsterdam", delivery: "Take away"});
+}
 
 // Add product to storage
 function addCount(imageId){
@@ -71,17 +78,25 @@ for (let i=0; i<selectedButtons.length; i++) {
     });
 }
 
+if (storage.getItems('order') && storage.getItems('order').length) {
+    document.getElementById('basket').innerHTML = storage.getItems('order').length;
+}
+// document.getElementById('numProd').innerHTML = storage.getItems('order').length || '0';
+
 //_________________________________
 //window Drawer, show all chosen items
 const basketImage = document.getElementById('basketImage');
 basketImage.addEventListener('click', () =>{
     document.getElementById('drawer').className = 'overlay visible';
+    document.getElementById('way').innerHTML = storage.getItems('delivery').delivery + ' at ' + storage.getItems('delivery').place;
+    if (storage.getItems('order') && storage.getItems('order').length) {
+        document.getElementById('numProd').innerHTML = storage.getItems('order').length;
+    }
     const orders = storage.getItems('order');
     if (orders && orders.length!==0){
         //delete old list of items from basket
         let element = document.getElementById('orderList');
         element = removeAllChildrenFromNode( element );
-        console.log(element);
         document.getElementById('orderList').replaceWith(element);
         // set new list of items into basket
         checkList(orders);
@@ -107,8 +122,7 @@ moreTreats.addEventListener('click', ()=>{
     document.getElementById('drawer').className = 'overlay';
 });
 
-
-
+finalPrice();
 
 
 console.log('index');

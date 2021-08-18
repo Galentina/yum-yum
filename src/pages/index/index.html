@@ -221,13 +221,17 @@
     <div class="drawer">
       <div class="drawer__main">
         <div class="drawer__header">
-          <h2 class="h2">Your order <span class="subtitle">(2 наименования)</span></h2>
+          <h2 class="h2">Your order &nbsp;&nbsp;
+            <span class="subtitle">(</span>
+            <span id="numProd" class="subtitle">0</span>
+            <span class="subtitle">&nbsp; products)</span>
+          </h2>
           <button id="closeDrawer" class="icon-button"><img src="img/icons/close.svg" alt=""></button>
         </div>
 
         <div class="delivery-option">
-          <div class="delivery-option__title">Delivery</div>
-          <div>at the address</div>
+          <div class="delivery-option__title">Receiving the order</div>
+          <div id="way">at the address</div>
         </div>
 
         <h2 class="h2">Selected items</h2>

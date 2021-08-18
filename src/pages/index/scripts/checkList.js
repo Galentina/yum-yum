@@ -3,6 +3,7 @@
 // show all chosen items, creating additional DOM elements
 import {storage} from "../../storage";
 import {removeAllChildrenFromNode} from "./removeAllChildrenFromNode";
+import {finalPrice} from "./finalPrice";
 
 export const checkList = (orders) => {
     const orderListItem = document.getElementById('orderListItem');
@@ -25,16 +26,13 @@ export const checkList = (orders) => {
 
 export const deleteItemFromList = () => {
     const orderList = document.getElementById('orderList');
-    console.log('bin', orderList);
     const bin = orderList.getElementsByTagName('button') || [];
 
-    console.log('bin', bin);
     for (let i=0; i<bin.length; i++) {
         bin[i].addEventListener('click', () => {
             // const id = bin[i].id[0];
             const item = bin[i].parentElement;
             let id =parseInt(bin[i].parentElement.id);
-            console.log(id);
             let title = item.querySelector('h3').innerHTML;
             let restaurant = item.querySelector('h2').innerHTML;
             storage.deleteItem({id: id, title: title, restaurant: restaurant });
@@ -45,3 +43,5 @@ export const deleteItemFromList = () => {
         });
     }
 };
+
+

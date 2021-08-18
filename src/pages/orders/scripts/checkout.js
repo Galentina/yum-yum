@@ -11,7 +11,7 @@ export class Checkout {
         const dateOfOrder = storage.getItems('date');
 
         this.#orders = storage.getItems('orders');
-        this.#checkoutTime = dateOfOrder.checkoutDate;
+        this.#checkoutTime = dateOfOrder.checkoutDate || '';
         this.#restaurants = ["McDonald's", "Domino Pizza", "KFC"];
         this.ifOrderFinished = Math.floor(Math.abs((Date.now() - Date.parse(this.#checkoutTime))/60000)) >= 60;
     }
@@ -20,7 +20,6 @@ export class Checkout {
     }
     getCheckoutTime = () =>{
         const remainTime =  Math.floor(Math.abs( 60 - (Date.now() - Date.parse(this.#checkoutTime))/60000));
-        console.log("remain", Date.now(), Date.parse(this.#checkoutTime));
         return remainTime
 
     }

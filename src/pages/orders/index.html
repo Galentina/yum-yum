@@ -31,18 +31,18 @@
       <div class="top-bar__left">
         <div class="select">
           <img class="select__icon" src="img/icons/location.svg" alt="">
-          <select id="location" class="select__field" name="location">
-            <option class="select__option" value="">Amsterdam</option>
-            <option class="select__option" value="">Utrecht</option>
-            <option class="select__option" value="">Rotterdam</option>
+          <select id="location1" class="select__field" name="location">
+            <option class="select__option" value="Amsterdam">Amsterdam</option>
+            <option class="select__option" value="Utrecht">Utrecht</option>
+            <option class="select__option" value="Rotterdam">Rotterdam</option>
           </select>
         </div>
 
         <div class="select">
           <img class="select__icon" src="img/icons/shopping-bag.svg" alt="">
-          <select id="deliveryWay" class="select__field" name="delivery-option">
-            <option class="select__option" value="">Take away</option>
-            <option class="select__option" value="">Delivery</option>
+          <select id="deliveryWay1" class="select__field" name="delivery-option">
+            <option class="select__option" value="Take away">Take away</option>
+            <option class="select__option" value="Delivery">Delivery</option>
           </select>
         </div>
       </div>
@@ -52,9 +52,9 @@
           <img class="input__icon" src="img/icons/search.svg" alt="">
           <input class="input__field" type="text" placeholder="Find something tasty">
         </div>
-        <button class="icon-button icon-button--orange">
+        <button id="basketImage1" class="icon-button icon-button--orange">
           <img src="img/icons/shopping-cart.svg" alt="">
-          <span class="icon-button__badge">0</span>
+          <span id="basket1" class="icon-button__badge">0</span>
         </button>
       </div>
     </div>
@@ -65,7 +65,7 @@
         <div id="r-Domino Pizza" class="coming-up__item coming-up-item">
           <div class="coming-up-item__header">
             <h4 class="h4">Domino’s Pizza</h4>
-            <div class="badge badge--orange">Delivery</div>
+            <div id="del-Domino Pizza" class="badge badge--orange">Delivery</div>
           </div>
 
           <div class="coming-up-info">
@@ -89,7 +89,7 @@
         <div id="r-McDonald's" class="coming-up__item coming-up-item">
           <div class="coming-up-item__header">
             <h4 class="h4">McDonald’s</h4>
-            <div class="badge badge--orange">Time for preparing</div>
+            <div id="del-McDonald's" class="badge badge--orange">Time for preparing</div>
           </div>
 
           <div class="coming-up-info">
@@ -113,7 +113,7 @@
         <div id="r-KFC" class="coming-up__item coming-up-item">
           <div class="coming-up-item__header">
             <h4 class="h4">KFC</h4>
-            <div class="badge badge--orange">Delivery</div>
+            <div id="del-KFC" class="badge badge--orange">Delivery</div>
           </div>
 
           <div class="coming-up-info">
@@ -194,43 +194,42 @@
 </div>
 
 <!--  add class 'visible' to open drawer-->
-<div class="overlay">
+<div id="drawer1" class="overlay">
   <div class="drawer">
     <div class="drawer__main">
       <div class="drawer__header">
-        <h2 class="h2">My order <span class="subtitle">(2 products)</span></h2>
-        <button class="icon-button"><img src="img/icons/close.svg" alt=""></button>
+        <h2 class="h2">Your order &nbsp;&nbsp;
+          <span class="subtitle">(</span>
+          <span id="numProd1" class="subtitle">0</span>
+          <span class="subtitle">&nbsp; products)</span>
+        </h2>
+        <button id="closeDrawer1" class="icon-button"><img src="img/icons/close.svg" alt=""></button>
       </div>
 
       <div class="delivery-option">
-        <div class="delivery-option__title">Delivery</div>
-        <div>at the address</div>
+        <div class="delivery-option__title">Receiving the order</div>
+        <div id="way1">at the address</div>
       </div>
 
-      <h2 class="h2">McDonald’s</h2>
-      <div class="order">
-        <div class="order__item order-item">
-          <img class="order-item__image" src="img/mac-2.jpg" alt="">
+      <h2 class="h2">Selected items</h2>
+      <div id = "orderList" class="order">
+
+      </div>
+
+      <div style = "display: none">
+        <div id = "orderListItem" data-id="data" class="order__item order-item">
+          <img class="order-item__image" src="img/pizza-2.jpg" alt="">
           <span class="order-item__quantity">1 X</span>
           <div class="order-item__info">
+            <h2 class="order-item__title h3">McDonald's</h2>
             <h3 class="order-item__title h3">Peperoni Pie</h3>
             <div class="order-item__price">7 &#8364;</div>
           </div>
-          <button class="icon-button icon-button--red"><img src="img/icons/delete.svg" alt=""></button>
-        </div>
-
-        <div class="order__item order-item">
-          <img class="order-item__image" src="img/mac-4.jpg" alt="">
-          <span class="order-item__quantity">2 X</span>
-          <div class="order-item__info">
-            <h3 class="order-item__title h3">Cheese Pie</h3>
-            <div class="order-item__price">8 &#8364;</div>
-          </div>
-          <button class="icon-button icon-button--red"><img src="img/icons/delete.svg" alt=""></button>
+          <button style="display: none" class="icon-button icon-button--red"><img src="img/icons/delete.svg" alt=""></button>
         </div>
       </div>
 
-      <button class="add-more">
+      <button id="moreTreats1" class="add-more">
         <img class="add-more__icon" src="img/icons/plus-purple.svg" alt="">
         Add more tasty treats
       </button>
@@ -239,7 +238,7 @@
         <img src="img/icons/delivery.svg" alt="">
         <div class="delivery-price__info">
           <span class="delivery-price__title">Delivery</span>
-          <span>5 &#8364;</span>
+          <span id="deliveryPrice">5 &#8364;</span>
         </div>
       </div>
 
@@ -249,8 +248,9 @@
           <textarea class="textarea__field" name="comments" id="comments"></textarea>
         </div>
 
-        <button class="button">
-          <span class="button__label">Checkout</span> (303 грн)
+        <button id="finalPrice" class="button">
+          <span class="button__label">Yoer order will be ready soon &nbsp;</span>
+          <span id="spPrice" style="font-weight: 200" class="button__label">(0 &#8364;)</span>
         </button>
       </div>
     </div>
