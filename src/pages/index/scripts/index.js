@@ -108,7 +108,7 @@ basketImage.addEventListener('click', () =>{
 const checkout = document.getElementById('finalPrice');
 checkout.addEventListener('click', ()=>{
     doCheckout();
-})
+});
 
 const closeDrawer = document.getElementById('closeDrawer');
 closeDrawer.addEventListener('click', () =>{

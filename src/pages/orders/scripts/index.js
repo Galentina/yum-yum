@@ -24,8 +24,8 @@ const restaurants = clientsInfo.getRestaurant();
 const timeSet = clientsInfo.getCheckoutTime();
 restaurants.map(el=> {
     document.getElementById(el).innerHTML = String(timeSet);
-    if (timeSet>0) {document.getElementById(`del-${el}`).innerHTML = 'Time for preparing'}
-    else {document.getElementById(`del-${el}`).innerHTML = 'Ready for delivery'}
+    if (timeSet>0) {document.getElementById(`del-${el}`).innerHTML = 'Time for preparing';}
+    else {document.getElementById(`del-${el}`).innerHTML = 'Ready for delivery';}
 });
 
 //Day, time setup for restaurants.
@@ -34,7 +34,7 @@ restaurants.map(el=> {
     document.getElementById(`d-${el}`).innerHTML = clientsInfo.getFormattedDate();
     document.getElementById(`t-${el}`).innerHTML = clientsInfo.getFormattedTime();
     fromRestaurant(el);
-})
+});
 
 
 //Not used class functions
@@ -62,7 +62,7 @@ basketImage1.addEventListener('click', () =>{
 
         checkList(orders);
         const finalPrice = storage.getItems('final price').sum;
-        document.getElementById('spPrice').innerHTML = `(price ${finalPrice} &#8364;)`
+        document.getElementById('spPrice').innerHTML = `(price ${finalPrice} &#8364;)`;
     }
 });
 
@@ -71,7 +71,7 @@ const checkout = document.getElementById('finalPrice');
 checkout.addEventListener('click', ()=>{
     // doCheckout();
     document.getElementById('drawer1').className = 'overlay';
-})
+});
 
 const closeDrawer = document.getElementById('closeDrawer1');
 closeDrawer.addEventListener('click', () =>{

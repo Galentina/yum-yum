@@ -22,4 +22,4 @@ export const fromRestaurant = (restaurant) => {
         }
     }
     return arr;
-}
+};

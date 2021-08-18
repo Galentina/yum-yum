@@ -18,4 +18,4 @@ export const doCheckout = () => {
     // storage.setFinalCheckout(checkoutList);
     storage.setItems('date', {checkoutDate: date});
     window.location.href = 'orders.html';
-}
+};

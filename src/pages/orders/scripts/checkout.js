@@ -20,7 +20,7 @@ export class Checkout {
     }
     getCheckoutTime = () =>{
         const remainTime =  Math.floor(Math.abs( 60 - (Date.now() - Date.parse(this.#checkoutTime))/60000));
-        return remainTime
+        return remainTime;
 
     }
     getFormattedDate = () =>{
